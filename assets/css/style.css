@@ -1,4 +1,14 @@
-#todo-error{
+#todo-error {
   color: red;
   font-size: 2em;
+}
+
+body {
+  height: 100vh;
+}
+
+#background-image-css {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

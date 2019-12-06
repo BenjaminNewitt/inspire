@@ -10,6 +10,8 @@ function drawWeather() {
 }
 export default class WeatherController {
   constructor() {
+    console.log("Hello from weather-controller");
+
     store.subscribe("weather", drawWeather);
     WeatherService.getWeather();
   }

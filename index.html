@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inspire</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Inspire</title>
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+  <!-- TODO inject style into bg-image template -->
+  <body class="container-fluid" id="bg-image">
+    <header class="row">
+      <!-- inject weather here -->
+      <div class="col-2" id="weather"></div>
+    </header>
+    <main class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <form onsubmit=""></form>
+              <div id="todos"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-	<div id="quote">
-		The Quote
-	</div>
+    <footer class="row">
+      <!-- inject quote here -->
+      <div class="col-6" id="quote"></div>
+    </footer>
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script type="module" src="app/main.js"></script>
+  </body>
 </html>
-<html>
+<html></html>

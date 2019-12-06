@@ -6,6 +6,8 @@ function _drawTodos() {}
 
 export default class TodoController {
   constructor() {
+    console.log("Hello from todo-controller");
+
     //TODO Remember to register your subscribers
     TodoService.getTodos();
   }
