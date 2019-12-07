@@ -14,10 +14,12 @@ export default class TodoController {
 
   async addTodo(e) {
     e.preventDefault();
-    var form = e.target;
-    var todo = {
-      //TODO build the todo object from the data that comes into this method
+    let form = e.target;
+    let todo = {
+      description: form.description.value
     };
+    console.log("new todo from controller", todo);
+
     try {
       await TodoService.addTodoAsync(todo);
     } catch (error) {

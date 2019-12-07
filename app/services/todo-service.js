@@ -1,7 +1,7 @@
 import store from "../store.js";
 
 // @ts-ignore
-const todoApi = axios.create({
+const _todoApi = axios.create({
   baseURL: "https://bcw-sandbox.herokuapp.com/api/benjamin/todos/",
   timeout: 8000
 });
@@ -9,13 +9,13 @@ const todoApi = axios.create({
 class TodoService {
   async getTodos() {
     console.log("Getting the Todo List");
-    let res = await todoApi.get();
+    let res = await _todoApi.get();
     //TODO Handle this response from the server
   }
 
   async addTodoAsync(todo) {
-    let res = await todoApi.post("", todo);
-    //TODO Handle this response from the server (hint: what data comes back, do you want this?)
+    let res = await _todoApi.post("", todo);
+    console.log("newTodo", res);
   }
 
   async toggleTodoStatusAsync(todoId) {
@@ -24,7 +24,7 @@ class TodoService {
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
 
-    let res = await todoApi.put(todoId, todo);
+    let res = await _todoApi.put(todoId, todo);
     //TODO do you care about this data? or should you go get something else?
   }
 
