@@ -9,7 +9,7 @@ function _drawBackgroundImage() {
   let backgroundImage = store.State.backgroundImage;
   console.log("backgroundImage for _drawBackgroundImage", backgroundImage);
   template = `<div style="background-image: url('${backgroundImage}');" class="fixed-top" id="background-image-css">`;
-  document.querySelector("#bg-image").innerHTML += template;
+  document.querySelector("#bg-image").innerHTML = template;
 }
 export default class ImageController {
   constructor() {

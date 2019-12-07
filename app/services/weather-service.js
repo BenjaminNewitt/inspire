@@ -2,15 +2,15 @@ import Weather from "../models/weather.js";
 import store from "../store.js";
 
 // @ts-ignore
-const weatherApi = axios.create({
+const _weatherApi = axios.create({
   baseURL: "//bcw-sandbox.herokuapp.com/api/weather",
   timeout: 3000
 });
 
 class WeatherService {
-  async getWeather() {
+  async getWeatherAsync() {
     console.log("Calling the Weatherman");
-    let res = await weatherApi.get();
+    let res = await _weatherApi.get();
     console.log("getWeather res", res);
 
     store.commit("weather", new Weather(res.data));

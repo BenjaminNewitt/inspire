@@ -10,6 +10,10 @@ html {
   color: white;
 }
 
+main {
+  height: 70%;
+}
+
 #background-image-css {
   height: 100vh;
   background-repeat: no-repeat;

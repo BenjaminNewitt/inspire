@@ -16,6 +16,6 @@ export default class WeatherController {
     console.log("Hello from weather-controller");
 
     store.subscribe("weather", _drawWeather);
-    WeatherService.getWeather();
+    WeatherService.getWeatherAsync();
   }
 }
