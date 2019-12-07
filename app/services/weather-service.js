@@ -11,6 +11,8 @@ class WeatherService {
   async getWeather() {
     console.log("Calling the Weatherman");
     let res = await weatherApi.get();
+    console.log("getWeather res", res);
+
     store.commit("weather", new Weather(res.data));
   }
 }
