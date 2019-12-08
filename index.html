@@ -23,15 +23,15 @@
       </div>
     </header>
     <main class="row justify-content-end align-items-end">
-      <div class="col-3">
+      <div class="col-4">
         <div class="card bg-dark">
           <div class="card-body bg-dark">
             <span id="todo-count">
               <!-- inject todo count here -->
             </span>
-            <ul id="todo" class="pl-0">
+            <div id="todo" class="row d-block">
               <!-- inject todo's here -->
-            </ul>
+            </div>
             <!-- make form to create todo -->
             <form onsubmit="app.todoController.addTodo(event)">
               <div class="form-group">

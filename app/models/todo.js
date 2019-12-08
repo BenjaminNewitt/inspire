@@ -7,7 +7,7 @@ export default class Todo {
 
   get Template() {
     return /* html */ `
-    <li>${this.description}</li>
+  <div class="col-12 d-flex justify-content-between"><input type="checkbox" name="completed" value="completed"/><p>${this.description}</p><p class="float-right" onclick="app.todoController.removeTodo('${this.id}')">X</p></div>
     `;
   }
 }

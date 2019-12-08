@@ -27,7 +27,7 @@ class TodoService {
   }
 
   async toggleTodoStatusAsync(todoId) {
-    let todo = store.State.todos.find(todo => todo._id == todoId);
+    let todo = store.State.todos.find(todo => todo.id == todoId);
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
@@ -37,6 +37,10 @@ class TodoService {
   }
 
   async removeTodoAsync(todoId) {
+    let res = await _todoApi.delete("" + todoId);
+    console.log("delete res", res);
+    this.getTodosAsync();
+
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?
