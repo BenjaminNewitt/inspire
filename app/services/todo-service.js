@@ -28,22 +28,26 @@ class TodoService {
 
   async toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
+    console.log("todo not toggled", todo.completed);
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-
+    if (todo.completed == true) {
+      todo.completed = !todo.completed;
+    } else {
+      todo.completed = true;
+    }
+    console.log("todo toggled", todo.completed);
     let res = await _todoApi.put(todoId, todo);
     //TODO do you care about this data? or should you go get something else?
+    console.log("todo res after toggle", res);
+    this.getTodosAsync();
   }
 
   async removeTodoAsync(todoId) {
     let res = await _todoApi.delete("" + todoId);
     console.log("delete res", res);
     this.getTodosAsync();
-
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
   }
 }
 

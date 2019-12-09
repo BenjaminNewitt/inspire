@@ -39,6 +39,8 @@ export default class TodoController {
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled
   async toggleTodoStatus(todoId) {
+    console.log("toggle todo id from controller", todoId);
+
     try {
       await TodoService.toggleTodoStatusAsync(todoId);
     } catch (error) {
