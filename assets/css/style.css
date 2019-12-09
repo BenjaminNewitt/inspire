@@ -47,3 +47,15 @@ main {
   background-size: cover;
   z-index: -1;
 }
+
+#weather {
+  text-shadow: 1px 1px #000000;
+}
+
+#quote {
+  text-shadow: 1px 1px #000000;
+}
+
+#todo-title {
+  text-shadow: 1px 1px #000000;
+}
