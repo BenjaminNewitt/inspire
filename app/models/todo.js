@@ -9,16 +9,16 @@ export default class Todo {
     let template = /* html */ `
   <div class="col-12 d-flex justify-content-between">`;
 
-    if (this.completed == false) {
+    if (this.completed == true) {
       template += /* html */ `<input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this.id}')" checked/>
-  <p><del>${this.description}</del></p>`;
-    } else if (this.completed == true) {
+  <p class="text-muted"><del>${this.description}</del></p>`;
+    } else if (this.completed == false) {
       template += /* html */ `<input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this.id}')"/>
     <p>${this.description}</p>`;
     }
     template += /* html */ `
-  <p class="float-right" onclick="app.todoController.removeTodo('${this.id}')">
-  X</p></div>
+  <div class="float-right x-button" onclick="app.todoController.removeTodo('${this.id}')">
+  X</div></div>
     `;
     return template;
   }

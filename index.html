@@ -23,7 +23,7 @@
       </div>
     </header>
     <main class="row justify-content-end align-items-end">
-      <div class="col-4">
+      <div class="col-4 col-md-3">
         <div class="card bg-dark">
           <div class="card-body bg-dark">
             <span id="todo-count">
@@ -39,12 +39,15 @@
                 <input
                   type="text"
                   name="description"
-                  class="form-control"
+                  class="form-control font-size p-0 pl-2"
                   placeholder="new todo"
+                  maxlength="20"
                   required
                 />
               </div>
-              <button class="btn btn-primary" type="submit">submit</button>
+              <button class="btn btn-primary font-size" type="submit">
+                submit
+              </button>
             </form>
           </div>
         </div>
