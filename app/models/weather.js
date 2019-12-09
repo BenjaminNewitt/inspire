@@ -14,6 +14,6 @@ export default class Weather {
 
   get Template() {
     return /* html */ `
-    <h2>${this.fahrenheit} o</h2>`;
+    <h2>${this.fahrenheit}o</h2>`;
   }
 }

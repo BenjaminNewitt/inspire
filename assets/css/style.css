@@ -26,6 +26,17 @@ main {
   cursor: pointer;
 }
 
+.card {
+  max-height: 30%;
+  overflow: hidden;
+}
+
+#todo {
+  overflow: auto;
+  width: auto;
+  max-height: 80%;
+}
+
 #background-image-css {
   height: 100vh;
   background-repeat: no-repeat;
